@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Karupatti &amp; Co. — Handcrafted Sweets &amp; Snacks · Coimbatore</title>
+
+<!-- SEO -->
+<meta name="description" content="Karupatti &amp; Co. — Handcrafted sweets and snacks made with palm jaggery, home-ground millets and home-rendered ghee. Zero white sugar. Zero preservatives. Made to order in Coimbatore, Tamil Nadu."/>
+<meta name="keywords" content="karupatti sweets, palm jaggery, ellu urundai, groundnut ladoo, millet biscuits, pista cookies, homemade sweets Coimbatore, healthy Indian sweets, no sugar sweets"/>
+<meta name="author" content="Karupatti &amp; Co."/>
+<link rel="canonical" href="https://karupattiandco.github.io/website/"/>
+<link rel="icon" type="image/png" href="images/logo.png"/>
+
+<!-- Open Graph -->
+<meta property="og:type" content="website"/>
+<meta property="og:url" content="https://karupattiandco.github.io/website/"/>
+<meta property="og:title" content="Karupatti &amp; Co. — Handcrafted Sweets &amp; Snacks · Coimbatore"/>
+<meta property="og:description" content="Palm jaggery, home-ground millets, home-rendered ghee. Zero white sugar. Zero preservatives. Made to order in Coimbatore."/>
+<meta property="og:image" content="https://karupattiandco.github.io/website/images/hero_16x9.png"/>
+<meta property="og:site_name" content="Karupatti &amp; Co."/>
+<meta property="og:locale" content="en_IN"/>
+
+<!-- Twitter / X Card -->
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:title" content="Karupatti &amp; Co. — Handcrafted Sweets &amp; Snacks"/>
+<meta name="twitter:description" content="Palm jaggery, home-ground millets, home-rendered ghee. Zero white sugar. Made to order."/>
+<meta name="twitter:image" content="https://karupattiandco.github.io/website/images/hero_16x9.png"/>
+
+<!-- Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Yeseva+One&family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300;1,400;1,600&family=Josefin+Sans:wght@300;400;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&display=swap" rel="stylesheet"/>
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;}
+:root{
+  --ink:#0e0a05;--surface:#17110a;--lift:#221808;
+  --gold:#c8920a;--gold2:#e8b84b;--cream:#f5edda;
+  --muted:rgba(245,237,218,0.55);--faint:rgba(245,237,218,0.22);
+  --border:rgba(200,146,10,0.18);--borderx:rgba(200,146,10,0.07);
+}
+html{scroll-behavior:smooth;}
+body{background:var(--ink);color:var(--cream);font-family:'Crimson Pro',serif;overflow-x:hidden;}
+
+/* IMAGE */
+.img-wrap{position:relative;overflow:hidden;background:var(--lift);}
+.img-wrap img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,opacity .4s;}
+.img-wrap:hover img{transform:scale(1.03);}
+
+/* NAV */
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:14px 40px;
+  background:rgba(14,10,5,0.92);backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--borderx);
+  transition:padding .3s;
+}
+.nav-left{display:flex;align-items:center;gap:12px;}
+.nav-logo-wrap{width:36px;height:36px;border-radius:50%;overflow:hidden;border:1px solid var(--border);flex-shrink:0;}
+.nav-logo-wrap img{width:100%;height:100%;object-fit:cover;}
+.nav-brand{font-family:'Yeseva One',serif;font-size:18px;color:var(--cream);text-decoration:none;}
+.nav-brand span{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);}
+.nav-links{display:flex;gap:28px;}
+.nav-links a{
+  font-family:'Josefin Sans',sans-serif;font-size:9px;
+  letter-spacing:3px;text-transform:uppercase;
+  color:var(--muted);text-decoration:none;transition:color .3s;
+}
+.nav-links a:hover{color:var(--gold);}
+.nav-order{
+  font-family:'Josefin Sans',sans-serif;font-size:9px;
+  letter-spacing:2px;text-transform:uppercase;font-weight:700;
+  background:var(--gold);color:var(--ink);
+  padding:9px 20px;border:none;cursor:pointer;
+  text-decoration:none;display:inline-block;
+  transition:background .3s;
+}
+.nav-order:hover{background:var(--gold2);}
+@media(max-width:700px){.nav-links{display:none;}}
+@media(max-width:480px){nav{padding:14px 18px;}}
+
+/* HERO */
+.hero{
+  min-height:100vh;display:flex;flex-direction:column;
+  align-items:center;justify-content:center;
+  text-align:center;padding:120px 24px 80px;
+  position:relative;overflow:hidden;
+}
+.hero-image-bg{position:absolute;inset:0;z-index:0;}
+.hero-image-bg picture,.hero-image-bg img{width:100%;height:100%;display:block;}
+.hero-image-bg img{object-fit:cover;opacity:.22;}
+.hero-glow{
+  position:absolute;inset:0;z-index:1;
+  background:
+    radial-gradient(ellipse at 50% 40%,rgba(200,146,10,.11) 0%,transparent 60%),
+    radial-gradient(ellipse at 20% 80%,rgba(200,146,10,.05) 0%,transparent 50%);
+}
+.ring{
+  position:absolute;border-radius:50%;
+  top:50%;left:50%;transform:translate(-50%,-50%);
+  border:1px solid var(--borderx);pointer-events:none;z-index:1;
+}
+.r1{width:260px;height:260px;}
+.r2{width:480px;height:480px;border-style:dashed;}
+.r3{width:700px;height:700px;}
+.r4{width:960px;height:960px;border-style:dashed;opacity:.5;}
+.r5{width:1200px;height:1200px;opacity:.25;}
+.hero>*:not(.hero-image-bg):not(.hero-glow):not(.ring){position:relative;z-index:2;}
+.hero-pre{
+  display:inline-flex;align-items:center;gap:10px;
+  border:1px solid var(--border);border-radius:100px;
+  padding:7px 20px;margin-bottom:30px;
+  animation:up .9s ease both;
+}
+.hero-pre::before,.hero-pre::after{content:'✦';color:var(--gold);font-size:8px;opacity:.5;}
+.hero-pre span{font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--gold);}
+.hero-name{
+  font-family:'Yeseva One',serif;
+  font-size:clamp(54px,11vw,104px);
+  color:var(--cream);line-height:.92;letter-spacing:-3px;
+  animation:up .9s .08s ease both;
+}
+.hero-amp{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);font-size:.65em;}
+.hero-co{color:var(--gold2);}
+.hero-tag{
+  font-family:'Cormorant Garamond',serif;font-style:italic;
+  color:var(--gold2);font-size:clamp(15px,2.8vw,22px);
+  margin-top:14px;animation:up .9s .15s ease both;
+}
+.hero-div{
+  display:flex;align-items:center;gap:16px;
+  margin:26px auto;width:fit-content;
+  animation:up .9s .22s ease both;
+}
+.hero-div hr{width:60px;border:none;border-top:1px solid var(--border);}
+.hero-div span{color:var(--gold);opacity:.6;font-size:18px;}
+.hero-p{
+  font-family:'Crimson Pro',serif;font-weight:300;
+  color:var(--muted);font-size:clamp(14px,2vw,17px);
+  max-width:480px;line-height:1.85;
+  animation:up .9s .3s ease both;
+}
+.hero-p strong{color:var(--cream);font-weight:600;}
+.hero-pills{
+  display:flex;flex-wrap:wrap;gap:8px;justify-content:center;
+  margin-top:28px;animation:up .9s .37s ease both;
+}
+.pill{
+  padding:6px 14px;border:1px solid var(--border);color:var(--gold);
+  font-family:'Josefin Sans',sans-serif;font-size:9px;
+  letter-spacing:2px;text-transform:uppercase;border-radius:2px;
+}
+.hero-btns{
+  display:flex;gap:12px;flex-wrap:wrap;justify-content:center;
+  margin-top:28px;animation:up .9s .44s ease both;
+}
+.btn-g{
+  padding:13px 30px;background:var(--gold);color:var(--ink);
+  font-family:'Josefin Sans',sans-serif;font-size:10px;
+  font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  border:none;cursor:pointer;text-decoration:none;display:inline-block;
+  transition:background .3s;
+}
+.btn-g:hover{background:var(--gold2);}
+.btn-o{
+  padding:13px 30px;background:transparent;color:var(--gold);
+  border:1px solid var(--border);
+  font-family:'Josefin Sans',sans-serif;font-size:10px;
+  font-weight:700;letter-spacing:2.5px;text-transform:uppercase;
+  cursor:pointer;text-decoration:none;display:inline-block;
+  transition:all .3s;
+}
+.btn-o:hover{border-color:var(--gold);background:rgba(200,146,10,.06);}
+.scroll-hint{
+  position:absolute;bottom:32px;left:50%;transform:translateX(-50%);
+  z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;
+  font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:3px;
+  text-transform:uppercase;color:var(--faint);
+  animation:up .9s .6s ease both;
+}
+.scroll-bar{width:1px;height:40px;background:linear-gradient(to bottom,var(--gold),transparent);animation:pulse 2s ease-in-out infinite;}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:1}}
+
+/* PROMISE BAR */
+.promise-bar{background:var(--surface);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:0;overflow-x:auto;}
+.promise-inner{display:flex;min-width:600px;}
+.promise-item{
+  flex:1;display:flex;align-items:center;gap:10px;
+  padding:18px 18px;border-right:1px solid var(--borderx);white-space:nowrap;
+}
+.promise-item:last-child{border-right:none;}
+.p-i{font-size:15px;flex-shrink:0;}
+.p-t{font-family:'Josefin Sans',sans-serif;font-size:8.5px;letter-spacing:1.8px;text-transform:uppercase;color:var(--gold);}
+
+/* STORY */
+.story{padding:100px 24px;background:var(--surface);border-bottom:1px solid var(--border);}
+.story-inner{max-width:700px;margin:0 auto;}
+.story-hero-img{width:100%;height:340px;margin-bottom:44px;border:1px solid var(--border);overflow:hidden;}
+.story-hero-img img{width:100%;height:100%;object-fit:cover;object-position:center top;}
+
+.eyebrow{font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:5px;text-transform:uppercase;color:var(--gold);margin-bottom:16px;opacity:.8;}
+.sec-title{font-family:'Yeseva One',serif;font-size:clamp(26px,4.5vw,44px);color:var(--cream);line-height:1.05;margin-bottom:28px;}
+.sec-title em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold2);}
+.tc{text-align:center;}
+.body{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:17px;line-height:1.9;margin-bottom:18px;}
+.body strong{color:var(--cream);font-weight:600;}
+.body em{font-style:italic;color:var(--gold2);}
+.pq{border-left:3px solid var(--gold);padding:18px 28px;margin:32px 0;background:rgba(200,146,10,.05);}
+.pq p{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(17px,3vw,23px);color:var(--gold2);line-height:1.55;}
+
+/* PHOTO STRIP */
+.photo-strip{display:grid;grid-template-columns:1fr 1fr 1fr;gap:3px;height:280px;overflow:hidden;}
+@media(max-width:600px){.photo-strip{grid-template-columns:1fr;height:auto;}}
+.photo-strip .img-wrap{height:100%;}
+@media(max-width:600px){.photo-strip .img-wrap{height:220px;}}
+
+/* INGREDIENTS */
+.ingredients{padding:100px 24px;background:var(--ink);}
+.sec-center{max-width:800px;margin:0 auto;}
+.ing-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--border);margin-top:40px;}
+@media(max-width:600px){.ing-grid{grid-template-columns:1fr;}}
+.ing-card{background:var(--ink);transition:background .3s;}
+.ing-card:hover{background:var(--surface);}
+.ing-img{width:100%;height:190px;overflow:hidden;}
+.ing-img img{width:100%;height:100%;object-fit:cover;opacity:.85;transition:transform .5s;}
+.ing-card:hover .ing-img img{transform:scale(1.04);}
+.ing-body{padding:24px 20px;}
+.ing-title{font-family:'Yeseva One',serif;color:var(--cream);font-size:17px;margin-bottom:8px;}
+.ing-text{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:14px;line-height:1.7;}
+.ing-text strong{color:var(--gold2);font-weight:600;}
+.ing-tag{display:inline-block;margin-top:12px;font-family:'Josefin Sans',sans-serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;border:1px solid var(--border);color:var(--gold);padding:4px 10px;}
+
+/* CATALOG */
+.catalog{padding:100px 24px;background:var(--surface);border-top:1px solid var(--border);}
+.catalog-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2px;background:var(--border);margin-top:40px;}
+.cat-item{background:var(--surface);display:flex;flex-direction:column;transition:background .3s;cursor:default;}
+.cat-item:hover{background:var(--lift);}
+.cat-img{width:100%;aspect-ratio:1;overflow:hidden;background:var(--ink);flex-shrink:0;}
+.cat-img img{width:100%;height:100%;object-fit:cover;opacity:.92;transition:transform .5s;}
+.cat-item:hover .cat-img img{transform:scale(1.04);}
+.cat-info{padding:20px 18px 22px;}
+.cat-name{font-family:'Yeseva One',serif;color:var(--cream);font-size:16px;margin-bottom:6px;}
+.cat-desc{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:13.5px;line-height:1.65;margin-bottom:10px;}
+.cat-tag{font-family:'Josefin Sans',sans-serif;font-size:7.5px;letter-spacing:2px;text-transform:uppercase;color:var(--gold);border:1px solid var(--border);display:inline-block;padding:3px 9px;}
+.cat-custom{margin-top:32px;text-align:center;font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--muted);font-size:17px;}
+.cat-custom strong{color:var(--gold2);}
+
+/* MENU SHOWCASE */
+.menu-showcase{background:var(--ink);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:72px 24px;}
+.menu-showcase-inner{max-width:900px;margin:0 auto;text-align:center;}
+.menu-img-wrap{margin-top:40px;border:1px solid var(--border);overflow:hidden;border-radius:2px;}
+.menu-img-wrap img{width:100%;height:auto;display:block;opacity:.95;}
+
+/* HOW TO ORDER */
+.how{padding:100px 24px;background:var(--surface);border-top:1px solid var(--border);}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:48px;max-width:780px;margin-left:auto;margin-right:auto;}
+@media(max-width:600px){.steps{grid-template-columns:1fr;gap:32px;}}
+.step{text-align:center;}
+.step-num{font-family:'Yeseva One',serif;font-size:52px;color:var(--gold);opacity:.2;line-height:1;margin-bottom:10px;display:block;}
+.step-img{width:100%;height:140px;overflow:hidden;margin-bottom:16px;border:1px solid var(--borderx);}
+.step-img img{width:100%;height:100%;object-fit:cover;opacity:.8;}
+.step-title{font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:2.5px;text-transform:uppercase;color:var(--gold);margin-bottom:10px;}
+.step-desc{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:15px;line-height:1.7;}
+.steps-note{max-width:500px;margin:40px auto 0;text-align:center;font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;color:var(--faint);font-size:15px;line-height:1.6;}
+
+/* WHY US */
+.whyus{padding:100px 24px;background:var(--ink);border-top:1px solid var(--border);border-bottom:1px solid var(--border);}
+.usp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--border);margin-top:40px;}
+.usp-card{background:var(--ink);padding:28px 22px;transition:background .3s;}
+.usp-card:hover{background:var(--surface);}
+.usp-n{font-family:'Yeseva One',serif;font-size:38px;color:var(--gold);opacity:.18;line-height:1;margin-bottom:10px;}
+.usp-title{font-family:'Josefin Sans',sans-serif;font-size:10px;letter-spacing:2px;text-transform:uppercase;color:var(--gold2);margin-bottom:10px;}
+.usp-desc{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:14px;line-height:1.7;}
+.usp-desc strong{color:var(--cream);font-weight:600;}
+
+/* TRUST QUOTE */
+.trust-q{padding:80px 24px;background:var(--lift);border-top:1px solid var(--border);border-bottom:1px solid var(--border);text-align:center;position:relative;overflow:hidden;}
+.tq-bg{position:absolute;inset:0;background:radial-gradient(ellipse at center,rgba(200,146,10,.07) 0%,transparent 65%);}
+.tq-inner{position:relative;z-index:2;max-width:600px;margin:0 auto;}
+.tq-mark{font-family:'Cormorant Garamond',serif;font-size:72px;color:var(--gold);opacity:.18;line-height:.6;display:block;margin-bottom:8px;}
+.tq-text{font-family:'Cormorant Garamond',serif;font-style:italic;font-size:clamp(20px,4vw,30px);color:var(--cream);line-height:1.45;}
+.tq-text span{color:var(--gold2);}
+.tq-attr{margin-top:24px;font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;color:var(--faint);}
+
+/* DIFFER */
+.differ{padding:80px 24px;background:var(--surface);}
+.differ-inner{max-width:760px;margin:0 auto;}
+.dtable{width:100%;border-collapse:collapse;margin-top:32px;}
+.dtable th{font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:3.5px;text-transform:uppercase;color:var(--gold);text-align:left;padding:10px 14px;border-bottom:1px solid var(--border);}
+.dtable td{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:14px;padding:13px 14px;border-bottom:1px solid var(--borderx);line-height:1.5;}
+.dtable td:first-child{color:var(--cream);font-weight:400;}
+.dtable .us{color:var(--gold2);font-weight:400;}
+.dtable .them{opacity:.5;}
+.dtable tr:hover td{background:rgba(200,146,10,.03);}
+@media(max-width:600px){
+  .dtable th:nth-child(2),.dtable td:nth-child(2),
+  .dtable th:nth-child(3),.dtable td:nth-child(3){display:none;}
+}
+
+/* CTA */
+.cta-section{padding:100px 24px;text-align:center;position:relative;overflow:hidden;background:var(--ink);}
+.cta-img-bg{position:absolute;inset:0;z-index:0;}
+.cta-img-bg img{width:100%;height:100%;object-fit:cover;opacity:.1;}
+.cta-overlay{position:absolute;inset:0;z-index:1;background:radial-gradient(ellipse at center,rgba(200,146,10,.09) 0%,transparent 65%);}
+.cta-ring{position:absolute;border-radius:50%;top:50%;left:50%;transform:translate(-50%,-50%);border:1px solid var(--borderx);}
+.cr1{width:300px;height:300px;z-index:1;}
+.cr2{width:560px;height:560px;border-style:dashed;z-index:1;}
+.cr3{width:820px;height:820px;opacity:.5;z-index:1;}
+.cta-content{position:relative;z-index:2;}
+.cta-tag{display:inline-block;background:var(--gold);color:var(--ink);font-family:'Josefin Sans',sans-serif;font-size:9px;letter-spacing:4px;text-transform:uppercase;font-weight:700;padding:7px 20px;margin-bottom:24px;}
+.cta-head{font-family:'Yeseva One',serif;font-size:clamp(32px,6vw,58px);color:var(--cream);line-height:1;margin-bottom:12px;}
+.cta-head em{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);}
+.cta-sub{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:clamp(14px,2vw,17px);max-width:440px;line-height:1.8;margin:0 auto 32px;}
+.cta-sub strong{color:var(--cream);}
+.cta-btns{display:flex;gap:12px;flex-wrap:wrap;justify-content:center;}
+.cta-note{margin-top:32px;font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);}
+
+/* INSTAGRAM FEED TEASER */
+.insta-strip{padding:72px 24px 80px;background:var(--lift);border-top:1px solid var(--border);}
+.insta-strip-inner{max-width:900px;margin:0 auto;text-align:center;}
+.insta-handle{
+  display:inline-flex;align-items:center;gap:10px;margin-top:32px;
+  font-family:'Josefin Sans',sans-serif;font-size:11px;letter-spacing:3px;text-transform:uppercase;
+  color:var(--gold);text-decoration:none;border:1px solid var(--border);
+  padding:12px 28px;transition:all .3s;
+}
+.insta-handle:hover{background:rgba(200,146,10,.08);border-color:var(--gold);}
+
+/* FOOTER */
+footer{background:var(--surface);border-top:1px solid var(--border);padding:56px 40px 32px;display:flex;align-items:flex-start;justify-content:space-between;flex-wrap:wrap;gap:32px;}
+.ft-brand{font-family:'Yeseva One',serif;color:var(--cream);font-size:22px;}
+.ft-brand span{font-family:'Cormorant Garamond',serif;font-style:italic;color:var(--gold);}
+.ft-tag{font-family:'Crimson Pro',serif;font-style:italic;font-weight:300;color:var(--muted);font-size:13px;margin-top:4px;}
+.ft-logo{width:48px;height:48px;border-radius:50%;overflow:hidden;border:1px solid var(--border);margin-bottom:12px;}
+.ft-logo img{width:100%;height:100%;object-fit:cover;}
+.ft-col h4{font-family:'Josefin Sans',sans-serif;font-size:8.5px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px;}
+.ft-col p,.ft-col a{font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:14px;display:block;margin-bottom:4px;text-decoration:none;transition:color .3s;}
+.ft-col a:hover{color:var(--gold2);}
+.ft-copy{width:100%;border-top:1px solid var(--borderx);padding-top:20px;margin-top:8px;font-family:'Josefin Sans',sans-serif;font-size:8px;letter-spacing:3px;text-transform:uppercase;color:var(--faint);text-align:center;}
+@media(max-width:600px){footer{padding:40px 24px 24px;flex-direction:column;}}
+
+/* ANIMATIONS */
+@keyframes up{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.reveal{opacity:0;transform:translateY(28px);transition:opacity .7s ease,transform .7s ease;}
+.reveal.in{opacity:1;transform:translateY(0);}
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-left">
+    <div class="nav-logo-wrap">
+      <img src="images/logo.png" alt="Karupatti &amp; Co. Logo" width="36" height="36"/>
+    </div>
+    <a href="#" class="nav-brand">Karupatti <span>&amp; Co.</span></a>
+  </div>
+  <div class="nav-links">
+    <a href="#story">Story</a>
+    <a href="#catalog">Products</a>
+    <a href="#why">Why Us</a>
+    <a href="#order">Order</a>
+  </div>
+  <a class="nav-order" href="https://www.instagram.com/karupattiandco/" target="_blank" rel="noopener noreferrer">Order Now</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-image-bg">
+    <picture>
+      <source media="(max-width:600px)" srcset="images/hero_9x16.png"/>
+      <img src="images/hero_16x9.png" alt="Karupatti &amp; Co. — Handcrafted Sweets" loading="eager" fetchpriority="high"/>
+    </picture>
+  </div>
+  <div class="hero-glow"></div>
+  <div class="ring r1"></div><div class="ring r2"></div>
+  <div class="ring r3"></div><div class="ring r4"></div><div class="ring r5"></div>
+
+  <div class="hero-pre"><span>Coimbatore, Tamil Nadu · Est. 2025</span></div>
+  <div class="hero-name">Karupatti<br/><span class="hero-amp">&amp;</span> <span class="hero-co">Co.</span></div>
+  <div class="hero-tag">Handcrafted Sweets &amp; Snacks · Made to Order</div>
+  <div class="hero-div"><hr/><span>𖤓</span><hr/></div>
+  <div class="hero-p">
+    Made with <strong>palm jaggery</strong>, <strong>home-ground millets</strong> and <strong>home-rendered ghee</strong>
+    — fresh after every order, with nothing to hide and everything to offer.
+  </div>
+  <div class="hero-pills">
+    <span class="pill">No White Sugar</span>
+    <span class="pill">No Maida</span>
+    <span class="pill">Gluten Free</span>
+    <span class="pill">Zero Preservatives</span>
+    <span class="pill">Made to Order</span>
+  </div>
+  <div class="hero-btns">
+    <a class="btn-g" href="https://www.instagram.com/karupattiandco/" target="_blank" rel="noopener noreferrer">Order on Instagram</a>
+    <a class="btn-o" href="#catalog">See What We Make</a>
+  </div>
+  <div class="scroll-hint"><div class="scroll-bar"></div><span>Scroll</span></div>
+</section>
+
+<!-- PROMISE BAR -->
+<div class="promise-bar">
+  <div class="promise-inner">
+    <div class="promise-item"><span class="p-i">🍯</span><span class="p-t">Palm Jaggery Only</span></div>
+    <div class="promise-item"><span class="p-i">🌾</span><span class="p-t">Home-Ground Millets</span></div>
+    <div class="promise-item"><span class="p-i">🫙</span><span class="p-t">Home-Made Ghee</span></div>
+    <div class="promise-item"><span class="p-i">✋</span><span class="p-t">Made After Your Order</span></div>
+    <div class="promise-item"><span class="p-i">✨</span><span class="p-t">Fully Customisable</span></div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section class="story reveal" id="story">
+  <div class="story-inner">
+    <div class="story-hero-img">
+      <img src="images/making.png" alt="Handcrafting karupatti sweets in our home kitchen" loading="lazy"/>
+    </div>
+    <div class="eyebrow">Our Story</div>
+    <h2 class="sec-title">The taste your grandmother made —<br/><em>kept alive.</em></h2>
+    <p class="body">Before sugar came in white packets, before biscuits came wrapped in plastic, every Tamil home had a kitchen that smelled of <strong>karupatti melting slowly in a heavy pan.</strong> That aroma wasn't manufactured. It was earned — through patience, through care, through hands that knew exactly what they were doing.</p>
+    <p class="body">That tradition didn't disappear because it was wrong. It disappeared because it was inconvenient. <em>We chose inconvenience.</em></p>
+    <div class="pq">
+      <p>"In a home kitchen in Coimbatore, she rolls each ball by hand. She uses karupatti she chose herself. She ground the millets that morning. The ghee on the pan was made in her own kitchen. She doesn't start until she gets your order. This is Karupatti &amp; Co."</p>
+    </div>
+    <p class="body">We grind our millets at home. We render our own ghee. We sweeten only with palm jaggery. <strong>Your order starts our kitchen — not a pre-made batch, not a conveyor belt.</strong> Every groundnut ball, every millet biscuit, every carrot cake was made for you, after you asked for it.</p>
+    <p class="body">We believe the food you feed your family deserves the same honesty your grandmother gave. And your children deserve to grow up knowing <em>what real food actually tastes like.</em></p>
+  </div>
+</section>
+
+<!-- PHOTO STRIP -->
+<div class="photo-strip">
+  <div class="img-wrap">
+    <img src="images/grundnut.png" alt="Groundnut sweets made with palm jaggery" loading="lazy"/>
+  </div>
+  <div class="img-wrap">
+    <img src="images/seasame.png" alt="Black sesame ellu urundai — the heritage sweet" loading="lazy"/>
+  </div>
+  <div class="img-wrap">
+    <img src="images/Packaging.png" alt="Karupatti &amp; Co. handcrafted packaging" loading="lazy"/>
+  </div>
+</div>
+
+<!-- INGREDIENTS -->
+<section class="ingredients reveal" id="ingredients">
+  <div class="sec-center">
+    <div class="eyebrow tc">Our Ingredients</div>
+    <h2 class="sec-title tc">Three ingredients.<br/><em>No compromises.</em></h2>
+    <div class="ing-grid">
+
+      <div class="ing-card">
+        <div class="img-wrap ing-img">
+          <img src="images/catalog_seasame.png" alt="Palm Jaggery — Karupatti" loading="lazy"/>
+        </div>
+        <div class="ing-body">
+          <div class="ing-title">Palm Jaggery</div>
+          <div class="ing-text">Not refined sugar. Not jaggery powder. <strong>Karupatti</strong> — mineral-rich, lower glycemic, the real sweetener Tamil kitchens have trusted for centuries.</div>
+          <span class="ing-tag">Our Sweetener · Always</span>
+        </div>
+      </div>
+
+      <div class="ing-card">
+        <div class="img-wrap ing-img">
+          <img src="images/catalog_cookie.png" alt="Home-Ground Millets" loading="lazy"/>
+        </div>
+        <div class="ing-body">
+          <div class="ing-title">Home-Ground Millets</div>
+          <div class="ing-text">We buy whole millets and <strong>grind them ourselves</strong> before each batch. No store flour. Full nutrition, nothing removed, nothing lost.</div>
+          <span class="ing-tag">Ground In-House · Every Batch</span>
+        </div>
+      </div>
+
+      <div class="ing-card">
+        <div class="img-wrap ing-img">
+          <img src="images/catalog_groundnut.png" alt="Home-Made Ghee bound Groundnut Ball" loading="lazy"/>
+        </div>
+        <div class="ing-body">
+          <div class="ing-title">Home-Made Ghee</div>
+          <div class="ing-text">Not store ghee. Ghee <strong>rendered in our own kitchen</strong>, the slow way, from good milk. You taste the difference immediately.</div>
+          <span class="ing-tag">Rendered At Home · Always Fresh</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- CATALOG / PRODUCTS -->
+<section class="catalog reveal" id="catalog">
+  <div class="sec-center">
+    <div class="eyebrow tc">What We Make</div>
+    <h2 class="sec-title tc">From our kitchen<br/><em>to your family.</em></h2>
+    <div class="catalog-grid">
+
+      <div class="cat-item">
+        <div class="cat-img img-wrap">
+          <img src="images/catalog_groundnut.png" alt="Smooth Groundnut Delights" loading="lazy"/>
+        </div>
+        <div class="cat-info">
+          <div class="cat-name">Smooth Groundnut Delights</div>
+          <div class="cat-desc">Fine-ground roasted peanuts in a rich, smooth Palm Jaggery blend. Protein-rich, no refined sugar, deeply Tamil in every bite. An elevated twist on a classic.</div>
+          <span class="cat-tag">Bestseller</span>
+        </div>
+      </div>
+
+      <div class="cat-item">
+        <div class="cat-img img-wrap">
+          <img src="images/catalog_seasame.png" alt="Fine-Ground Ellu Urundai — Black Sesame" loading="lazy"/>
+        </div>
+        <div class="cat-info">
+          <div class="cat-name">Fine-Ground Ellu Urundai</div>
+          <div class="cat-desc">Silky-smooth, finely milled roasted black sesame and pure Palm Jaggery. The original Tamil superfood ball — calcium-rich, traditional, timeless. A delicate, rich flavour experience.</div>
+          <span class="cat-tag">Heritage Pick</span>
+        </div>
+      </div>
+
+      <div class="cat-item">
+        <div class="cat-img img-wrap">
+          <img src="images/catalog_cake.png" alt="Palm Jaggery Carrot &amp; Fig Sweet Cake" loading="lazy"/>
+        </div>
+        <div class="cat-info">
+          <div class="cat-name">Carrot &amp; Fig Sweet Cake</div>
+          <div class="cat-desc">House-made cake with grated carrots, figs, spices, and a Palm Jaggery infusion. Millet-based, naturally moist. No maida, no white sugar, no preservatives.</div>
+          <span class="cat-tag">Crowd Favourite</span>
+        </div>
+      </div>
+
+      <div class="cat-item">
+        <div class="cat-img img-wrap">
+          <img src="images/catalog_cookie.png" alt="Spiced Millet &amp; Pista Cookies" loading="lazy"/>
+        </div>
+        <div class="cat-info">
+          <div class="cat-name">Spiced Millet &amp; Pista Cookies</div>
+          <div class="cat-desc">Wholesome, grainy cookies made with nutritious millets and crushed pistachios, lightly spiced with cardamom and cinnamon. The snack that replaces the packet biscuit.</div>
+          <span class="cat-tag">Daily Snack</span>
+        </div>
+      </div>
+
+    </div>
+    <p class="cat-custom">Every product is <strong>fully customisable</strong> — sweetness level, portion size, nut-free, gift packaging. Just tell us.</p>
+  </div>
+</section>
+
+<!-- MENU SHOWCASE -->
+<section class="menu-showcase reveal">
+  <div class="menu-showcase-inner">
+    <div class="eyebrow tc">The Collection</div>
+    <h2 class="sec-title tc">The Traditional Sweets<br/><em>Collection</em></h2>
+    <div class="menu-img-wrap">
+      <img src="images/menu.png" alt="The Traditional Sweets Collection — Karupatti &amp; Co." loading="lazy"/>
+    </div>
+  </div>
+</section>
+
+<!-- HOW TO ORDER -->
+<section class="how reveal" id="order">
+  <div class="sec-center">
+    <div class="eyebrow tc">How to Order</div>
+    <h2 class="sec-title tc">Three steps.<br/><em>One honest kitchen.</em></h2>
+    <div class="steps">
+      <div class="step">
+        <span class="step-num">01</span>
+        <div class="img-wrap step-img">
+          <img src="images/hero_1x1.png" alt="Browse and choose your sweets" loading="lazy"/>
+        </div>
+        <div class="step-title">DM on Instagram</div>
+        <div class="step-desc">Send us a DM on Instagram. Tell us what you want — product, quantity, any customisation. We respond fast.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">02</span>
+        <div class="img-wrap step-img">
+          <img src="images/making.png" alt="We make your order fresh" loading="lazy"/>
+        </div>
+        <div class="step-title">We Make It Fresh</div>
+        <div class="step-desc">Your order triggers the kitchen. We grind, mix, bake or roll — freshly, for you, with our three hero ingredients.</div>
+      </div>
+      <div class="step">
+        <span class="step-num">03</span>
+        <div class="img-wrap step-img">
+          <img src="images/Packaging.png" alt="Receive your handcrafted order" loading="lazy"/>
+        </div>
+        <div class="step-title">Receive &amp; Enjoy</div>
+        <div class="step-desc">Your order arrives fresh — same or next day after it was made. No shelf time. No waiting. Real food, just for you.</div>
+      </div>
+    </div>
+    <p class="steps-note">Minimum order quantities apply. Delivery or pickup available in Coimbatore. DM us on Instagram for details.</p>
+  </div>
+</section>
+
+<!-- WHY US -->
+<section class="whyus reveal" id="why">
+  <div class="sec-center">
+    <div class="eyebrow tc">Why Karupatti &amp; Co.</div>
+    <h2 class="sec-title tc">Seven reasons<br/><em>no one else can match.</em></h2>
+    <div class="usp-grid">
+      <div class="usp-card"><div class="usp-n">01</div><div class="usp-title">Made to Order</div><div class="usp-desc"><strong>No pre-made stock, ever.</strong> Your order starts your batch. The freshest possible food — guaranteed.</div></div>
+      <div class="usp-card"><div class="usp-n">02</div><div class="usp-title">In-House Millet Grinding</div><div class="usp-desc">We grind whole millets ourselves. <strong>No other home kitchen does this.</strong> Maximum nutrition, full transparency.</div></div>
+      <div class="usp-card"><div class="usp-n">03</div><div class="usp-title">Zero White Sugar</div><div class="usp-desc">A non-negotiable policy. <strong>Palm jaggery only, always</strong> — mineral-rich, lower GI, the right choice for your family.</div></div>
+      <div class="usp-card"><div class="usp-n">04</div><div class="usp-title">Home-Rendered Ghee</div><div class="usp-desc">Made in our kitchen, the slow way. <strong>You can taste the difference</strong> — and trust the source completely.</div></div>
+      <div class="usp-card"><div class="usp-n">05</div><div class="usp-title">Full Customisation</div><div class="usp-desc">Less sweet, nut-free, gift packing, specific portions — <strong>you talk directly to the maker.</strong> We listen. We adjust.</div></div>
+      <div class="usp-card"><div class="usp-n">06</div><div class="usp-title">Zero Preservatives</div><div class="usp-desc">Short shelf life by design. <strong>What you receive was made for you</strong> — never on a shelf, never needed to be.</div></div>
+      <div class="usp-card"><div class="usp-n">07</div><div class="usp-title">Full Accountability</div><div class="usp-desc">One kitchen, one maker, one standard. <strong>You know exactly who made your food.</strong> No factory, no anonymity.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TRUST QUOTE -->
+<section class="trust-q">
+  <div class="tq-bg"></div>
+  <div class="tq-inner">
+    <span class="tq-mark">"</span>
+    <div class="tq-text">We do not use any ingredient<br/>we cannot explain to a <span>five-year-old.</span></div>
+    <div class="tq-attr">Karupatti &amp; Co. · The Kitchen Standard</div>
+  </div>
+</section>
+
+<!-- DIFFER TABLE -->
+<section class="differ reveal">
+  <div class="differ-inner">
+    <div class="eyebrow">The Comparison</div>
+    <h2 class="sec-title">How we differ<br/><em>from every other option.</em></h2>
+    <table class="dtable">
+      <thead>
+        <tr><th>What Matters</th><th>Supermarket Sweets</th><th>Other Home Bakers</th><th>Karupatti &amp; Co.</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Sweetener</td><td class="them">White sugar / glucose syrup</td><td class="them">Jaggery powder (store-bought)</td><td class="us">Palm jaggery — karupatti only</td></tr>
+        <tr><td>Flour base</td><td class="them">Maida (refined flour)</td><td class="them">Store-bought flour</td><td class="us">Home-ground millets, in-house</td></tr>
+        <tr><td>Fat used</td><td class="them">Vanaspati / refined oil</td><td class="them">Store ghee or butter</td><td class="us">Home-rendered ghee</td></tr>
+        <tr><td>When made</td><td class="them">Pre-made batches, days old</td><td class="them">Small batch, 1–3 days old</td><td class="us">Made after your order — always</td></tr>
+        <tr><td>Preservatives</td><td class="them">Multiple artificial additives</td><td class="them">Some natural preservatives</td><td class="us">Zero. None. Never.</td></tr>
+        <tr><td>Customisation</td><td class="them">None</td><td class="them">Limited</td><td class="us">Full — sweetness, nuts, size, pack</td></tr>
+        <tr><td>Who made it</td><td class="them">Unknown factory process</td><td class="them">A baker, some transparency</td><td class="us">One home kitchen, full transparency</td></tr>
+      </tbody>
+    </table>
+  </div>
+</section>
+
+<!-- INSTAGRAM TEASER -->
+<section class="insta-strip reveal">
+  <div class="insta-strip-inner">
+    <div class="eyebrow tc">Follow Along</div>
+    <h2 class="sec-title tc">See it being made.<br/><em>Follow us on Instagram.</em></h2>
+    <p style="font-family:'Crimson Pro',serif;font-weight:300;color:var(--muted);font-size:17px;line-height:1.8;max-width:480px;margin:0 auto;">Watch every batch being made, follow new products, and place your order — all on Instagram.</p>
+    <a class="insta-handle" href="https://www.instagram.com/karupattiandco/" target="_blank" rel="noopener noreferrer">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      @karupattiandco
+    </a>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section" id="cta">
+  <div class="cta-img-bg">
+    <img src="images/hero_16x9.png" alt="" aria-hidden="true" loading="lazy"/>
+  </div>
+  <div class="cta-overlay"></div>
+  <div class="cta-ring cr1"></div>
+  <div class="cta-ring cr2"></div>
+  <div class="cta-ring cr3"></div>
+  <div class="cta-content">
+    <div class="cta-tag">Now Open for Orders</div>
+    <h2 class="cta-head">Order fresh.<br/><em>Eat real.</em></h2>
+    <p class="cta-sub">DM us on Instagram. Tell us what you want, any customisation, and <strong>we start the kitchen for you.</strong></p>
+    <div class="cta-btns">
+      <a class="btn-g" href="https://www.instagram.com/karupattiandco/" target="_blank" rel="noopener noreferrer">Order on Instagram</a>
+      <a class="btn-o" href="#catalog">See All Products</a>
+    </div>
+    <div class="cta-note">Coimbatore, Tamil Nadu · Home Kitchen · @karupattiandco · Made with love</div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div>
+    <div class="ft-logo">
+      <img src="images/logo.png" alt="Karupatti &amp; Co." width="48" height="48" loading="lazy"/>
+    </div>
+    <div class="ft-brand">Karupatti <span>&amp; Co.</span></div>
+    <div class="ft-tag">Real ingredients. Real care. Real food.</div>
+  </div>
+  <div class="ft-col">
+    <h4>Our Products</h4>
+    <p>Smooth Groundnut Delights</p>
+    <p>Fine-Ground Ellu Urundai</p>
+    <p>Carrot &amp; Fig Sweet Cake</p>
+    <p>Spiced Millet &amp; Pista Cookies</p>
+  </div>
+  <div class="ft-col">
+    <h4>Our Promise</h4>
+    <p>No White Sugar · No Maida</p>
+    <p>No Preservatives</p>
+    <p>Made to Order · Always Fresh</p>
+    <p>Fully Customisable</p>
+  </div>
+  <div class="ft-col">
+    <h4>Reach Us</h4>
+    <a href="https://www.instagram.com/karupattiandco/" target="_blank" rel="noopener noreferrer">Instagram · @karupattiandco</a>
+    <p>Coimbatore, Tamil Nadu</p>
+    <p>Home Kitchen · Est. 2025</p>
+  </div>
+  <div class="ft-copy">&copy; 2025 Karupatti &amp; Co. · Coimbatore, Tamil Nadu · All rights reserved · Handcrafted with love</div>
+</footer>
+
+<script>
+// Scroll reveal
+const obs = new IntersectionObserver(entries => {
+  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('in'); });
+}, { threshold: 0.1 });
+document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+// Nav shrink on scroll
+const nav = document.querySelector('nav');
+window.addEventListener('scroll', () => {
+  nav.style.padding = window.scrollY > 60 ? '10px 40px' : '';
+}, { passive: true });
+</script>
+</body>
+</html>
